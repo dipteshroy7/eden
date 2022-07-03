@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
+import { SignupContext } from "./contexts/SignupContext";
+
+import { Logo, Tracker, SignupTab1, SignupTab2, SignupTab3, SignupTab4 } from "./components";
 
 function App() {
+  const [pointer, setPointer] = useState(1);
+  const [formData, setFormData] = useState({
+    full_name: "",
+    display_name: "",
+    workspace_name: "",
+    workspace_url: "",
+    workspace_type_team: false,
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SignupContext.Provider value={{ pointer, setPointer, formData, setFormData }}>
+        <Logo />
+        <Tracker />
+        {pointer === 1 && <SignupTab1 />}
+        {pointer === 2 && <SignupTab2 />}
+        {pointer === 3 && <SignupTab3 />}
+        {pointer === 4 && <SignupTab4 />}
+      </SignupContext.Provider>
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  margin: 65px 0px;
+}
+.logo > img {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}

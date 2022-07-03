@@ -1,0 +1,15 @@
+.workspace-url {
+  display: flex;
+}
+.fix-url {
+  font-size: 13px;
+  border-right: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  width: 100px !important;
+  background-color: #eee;
+}
+.input-url {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}

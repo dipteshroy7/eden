@@ -1,0 +1,26 @@
+.plan-container {
+  display: flex;
+  justify-content: space-between;
+}
+.plan {
+  height: 125px;
+  width: 120px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+.plan > img {
+  height: 20px;
+}
+.plan-selected {
+  border: 1px solid #664de5;
+}
+.plan > h4 {
+  margin: 20px 0px 10px 0px;
+}
+.plan > div {
+  color: #ccc;
+  font-size: 13px;
+}
